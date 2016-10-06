@@ -15,8 +15,8 @@
           </div>
           <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
-              <input type="text" class="form-control" ng-model="artist" placeholder="Artist Name" >
-              <button class="btn btn-primary" ng-click="getSongData()"> Submit </button>
+              <input type="text" class="form-control" ng-model="artist" placeholder="Artist Name" ng-keyup='getSongData()'>
+              <!-- <button class="btn btn-primary" ng-click="getSongData()"> Submit </button> -->
             </div>
           </form>
         </div>
@@ -26,6 +26,14 @@
       <div class="panel-heading"> Your Search Results:</div>
      <div class="gridStyle" ng-grid="gridOptions" swap-image="defaultInfo.search"></div>
     </div>
+  <!-- <div>
+    <ul>
+      <li ng-repeat='artist in artistData'>{{artist.Collection}} </li>
+      <li ng-repeat='artist in artistData'>{{artist.Song}}</li>
+    </ul>
+  </div> -->
+
+  <!-- {{songData}} -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.11/ng-grid.min.js"></script>
